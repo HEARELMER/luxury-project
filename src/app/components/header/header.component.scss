@@ -1,0 +1,55 @@
+// .content{
+//   @apply w-full flex justify-around items-center p-3 
+// }
+
+// .div-group{
+//     @apply  flex  flex-col justify-center gap-2
+// }
+// .button-group{
+//  @apply w-full  flex  gap-6
+// }
+// .button-nav{
+//     border: 1px solid red;
+//     background-color: rgb(249, 19, 19, 0.2) ;
+//     @apply p-2 text-cyan-50 rounded-lg font-bold
+// }
+// .button-nav:hover{
+//     box-shadow: 0px 0px 10px 1px red;
+//     background-color: red;
+// }
+// img{
+//     @apply rounded-full w-20 
+// }
+
+// .info{
+//     @apply flex gap-4 text-gray-100  justify-center
+// }
+header{
+    border-bottom: 2px  red;
+    @apply w-full flex  p-3 justify-center
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    // bottom: 0;
+    height: 1px; 
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(238, 26, 2) 60%, rgba(0,0,0,1) 100%);
+}
+// .logo{
+//     @apply flex 
+// }
+img {
+    @apply rounded-full w-10
+}
+h1{
+    font-size: 25px;
+    @apply text-red-600  font-extrabold
+}
+.navbar{
+    @apply  flex gap-4
+}

@@ -1,0 +1,10 @@
+.btn{
+    @apply text-white  rounded-lg p-2 flex gap-1 justify-center items-center;
+    
+    &:hover{  
+        @apply bg-gray-800
+    }
+    img{
+        @apply w-5
+    }
+}

@@ -1,0 +1,13 @@
+<!-- <button class="btn">
+    {{ text }}
+</button>
+<button class="btn btn-icon">
+    {{ text }}
+</button> -->
+
+<button [class]="btnClass">
+    @if (btnClass=='btn btn-icon') {
+        <img [src]="icon" class="icon">
+    }
+    {{ text }}
+</button>
