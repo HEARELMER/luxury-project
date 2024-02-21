@@ -1,47 +1,75 @@
-// main{
-//     @apply h-full w-full
-// }
-
-// .background{
-//     position: absolute;
-//     height: 100%;
-//     img{
-//         height: 100%;
-//     }
-
-// }
-
-// .background::before {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(0, 0, 0, 0.5); 
-
-// }
-// .home{
-//     @apply h-full  w-full absolute
-// }
-
-// .carrusel{
-    
-//     @apply flex flex-col w-3/4 m-auto justify-center items-center  relative
-// }
-
-// .title{
-//     font-size: 30px;
-//     @apply text-yellow-300 font-extrabold 
-// }
 main{
-    @apply w-full;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
-.images-carrusel{
-    margin-top: 5%;
-    @apply  flex justify-center items-center;
 
-    img{
-        @apply rounded-lg;
+
+.back{
+    @apply animate-bounce w-6 h-6 bg-slate-800 w-auto h-auto rounded-full absolute right-3 bottom-3
+}
+
+.caroousel-div{
+    width: 80%;
+    height: 600px;
+    
+    @apply mt-8 ;
+}
+img{
+    width: 100%;
+    height: 100%;
+    // border-radius: 50%;
+}
+
+.info{
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    @apply z-10 bg-primary absolute bottom-0 right-0 w-1/3
+    text-2xl text-yellow-200
+    font-extrabold flex flex-col items-center gap-4 py-2 justify-center
+}
+
+.tours{
+    @apply  flex flex-col items-center justify-center;
+    .tours-info{
+        @apply text-center gap-2 p-3 ;
     }
+    .tours-info .title-tours{
+        @apply font-extrabold text-2xl text-primary ;
+    }
+}
+
+.destinos-div , .paquetes{
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    @apply  w-full grid place-content-center  gap-2 p-5
+}
+
+.content{
+    
+    height: auto;
+    width: auto;
+    @apply relative  overflow-hidden rounded-lg h-auto;
+}
+
+.background{
+    height: 500px;
+    width: 500px;
+    top: 500px;
+    background-color: rgba(255, 221, 0, 0.1);
+    border-radius:  57% 43% 35% 65% / 43% 14% 86% 57%  ;
+    position: absolute;
+    z-index: -100;
+}
+
+.background::before{
+    content: '';
+  
+
+}
+
+@keyframes moveBackground {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(200px, 100px); }
+    100% { transform: translate(0, 0); }
 }

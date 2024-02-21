@@ -1,0 +1,14 @@
+section{
+    @apply  w-full flex flex-col
+}
+.container{
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    @apply  grid place-content-center place-items-center  gap-2 p-5 justify-center;
+}
+
+.title{
+    @apply w-full flex flex-col items-center justify-center;
+    h1{
+        @apply text-2xl text-primary font-extrabold;
+    }
+}

@@ -1,0 +1,29 @@
+main{
+    width: 300px;
+    @apply flex flex-col rounded-lg bg-slate-800  hover:-translate-y-2  transition duration-300 ease-in-out;
+}
+
+.image-card img{
+    // width: 300px;
+    width: auto;
+    height: 400px;
+    @apply   rounded-t-lg  ;
+}
+
+.info-card{
+    @apply p-2  flex flex-col items-center;
+
+    .title,.price{
+        @apply font-extrabold text-xl text-yellow-300;
+    }
+    .details{
+        @apply text-gray-500 text-center flex flex-col;
+    }
+    
+    .btn-card{
+        @apply mt-1 bg-red-600 text-white font-semibold p-2 
+        rounded-lg
+        hover:bg-pink-950;
+    }
+    
+}

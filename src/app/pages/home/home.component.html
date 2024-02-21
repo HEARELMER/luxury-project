@@ -1,19 +1,126 @@
-<!-- <main>
-    <div class="background">
-        <img src="https://www.luxurytravelperu.pe/slider4/baner4.jpg" loading="lazy" alt="">
-    </div>
-    <div class="home">
-        <app-header></app-header>
-        <section class="carrusel">
-            
-            <img class="rounded-lg" src="https://www.iletours.com/wp-content/uploads/2024/01/aguas-turquesas-ayacucho.jpg" alt="">
-        </section>
-    </div>
-</main> -->
 
 <main>
     <app-header></app-header>
-    <div class="images-carrusel">
-        <img src="https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2020/09/13163132/70928067_103581854376236_9028388690644172800_n.jpg" alt="">
+    
+    <div class="background">
     </div>
+    <div id="default-carousel" class="relative caroousel-div" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative  overflow-hidden rounded-lg md:h-full">
+            
+            @for (item of imagesData; track $index) {
+                <div class=" duration-700 ease-in-out" data-carousel-item>
+                   
+                    <img src="{{item.image}}" class="absolute block w-full  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <div class="info ">
+                        <span class="block">{{item.namePlace}}</span>
+                        <a href="https://www.google.com/maps/search/?api=1&query= {{item.namePlace}} {{ item.location}} " target="_blank" class="bg-slate-600 rounded-lg block">
+                            <app-button class="bg-slate-600 rounded-lg" btnClass="btn btn-icon" [icon]="'./assets/ubicacion.svg'" [text]="item.location">
+                            </app-button>
+                        </a>
+                    </div> 
+                </div>  
+                }
+        
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+    <!-- <div class="tours w-full">
+        <div class="tours-info">
+            <h1 class="title-tours">Tours más vendidos 2024</h1>
+            <span class="text-gray-500 block text-lg">Disfruta de los diversos atractivos que conforman este hermoso país.</span>
+        </div>
+    
+        <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+           
+            <div class="relative  overflow-hidden rounded-lg h-auto">
+          
+                <div class="hidden duration-700 ease-in-out relative" data-carousel-item="active">
+                    <div class="flex justify-center items-center h-full gap-2">
+                        <app-card></app-card>
+                        <app-card></app-card>
+                        <app-card></app-card>
+                        <app-card></app-card>
+                    </div>
+                </div>
+    
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <div class="flex justify-center items-center h-full gap-2">
+                        <app-card></app-card>
+                        <app-card></app-card>
+                        <app-card></app-card>
+                        <app-card></app-card>
+                    </div>
+                </div>
+                
+    
+                
+            </div>
+            <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            </div>
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+    </div> -->
+    
+
+    <button class="back ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#eab308" d="m11 8.8l-2.9 2.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.6-4.6q.3-.3.7-.3t.7.3l4.6 4.6q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275L13 8.8V17q0 .425-.288.713T12 18q-.425 0-.712-.288T11 17z"/></svg>
+    </button>
+
+
+   
+    <app-content-cards class="w-full" [titleContainer]="'Golll'">
+        @for (item of dataCard; track $index) {
+            <app-card [dataCard]="item" ></app-card>
+        }
+        
+    </app-content-cards>
+    <app-content-cards class="w-full" [titleContainer]="'Paquetes Luxury en Ayacucho'" >
+        @for (item of dataCard; track $index) {
+            <app-card [dataCard]="item" ></app-card>
+        }   
+    </app-content-cards>
+    <app-footer class="w-full" ></app-footer>
 </main>

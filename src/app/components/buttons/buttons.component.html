@@ -5,9 +5,22 @@
     {{ text }}
 </button> -->
 
-<button [class]="btnClass">
-    @if (btnClass=='btn btn-icon') {
-        <img [src]="icon" class="icon">
+<button [class]="btnClass"  (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
+    @if (btnClass.includes('btn-icon')  ) {
+        <ng-container>
+            <img [src]="icon" class="icon">
+        </ng-container>
     }
     {{ text }}
+    @if (btnClass.includes('btn-drop') && isHovered || isMenuHovered  ) {
+        <ng-container>
+            <div class="drop-menu">
+               @for (item of options; track $index) {
+                <a href="#" class="dropdown-item">{{item}}</a>
+               }
+            </div>
+        </ng-container>
+    }
+
 </button>
+

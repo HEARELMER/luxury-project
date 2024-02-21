@@ -57,15 +57,14 @@
 <header>
     <div class="navbar">
         <img src="./assets/luxury.jpg" loading="lazy"  alt="luxury logo">
-        <h1>LUXURY TRAVELS</h1>
+        <h1>LUXURY TRAVEL</h1>
         <app-button [text]="'Inicio'" ></app-button>
         <app-button [text]="'Quienes somos'" ></app-button>
-        <app-button [text]="'Tours Diarios'" ></app-button>
-        <app-button [text]="'Paquetes Ayacucho'" ></app-button>
-        <app-button btnClass="btn btn-icon" [text]="'Vuelos'"  [icon]="'./assets/avion.svg'"></app-button>
+        <app-button [text]="'Tours Diarios'"  btnClass="btn btn-drop"  [options]='tours'></app-button>
+        <app-button [text]="'Paquetes Ayacucho'"  btnClass="btn btn-drop"  [options]='paquetes' ></app-button>
+        <app-button btnClass="btn btn-icon btn-drop"   [text]="'Vuelos'" [options]='vuelos'  [icon]="'./assets/avion.svg'"></app-button>
         <app-button [text]="'Políticas y Condiciones'" ></app-button>
         <app-button btnClass="btn btn-icon"  [icon]="'./assets/phone.svg'" [text]="'Contáctenos'" ></app-button>
     </div>
-
 
 </header>
