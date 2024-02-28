@@ -31,3 +31,10 @@
     border: 10px solid transparent; /* Tamaño del triángulo */
     @apply border-b-slate-700
 }
+
+.icon{
+   
+    @apply px-2 rounded-full flex flex-col hover:scale-105;  ;  
+
+    
+}

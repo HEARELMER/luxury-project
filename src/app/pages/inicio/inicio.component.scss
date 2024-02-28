@@ -1,0 +1,59 @@
+main{
+    @apply w-full flex flex-col items-center justify-center overflow-x-hidden;
+}
+.caroousel-div{
+    width: 100%;
+    height: 90vh;
+    // @apply mt-8 ;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    // border-radius: 50%;
+}
+// bandera de lugar
+
+
+// .info{
+//     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+//     @apply z-10 bg-green-400 absolute bottom-0 right-0 w-1/3
+//     text-2xl text-yellow-200
+//     font-extrabold flex flex-col items-center gap-4 py-2 justify-center
+// }
+.place{
+    // clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    @apply z-10 bg-green-500 absolute bottom-5 right-3 w-1/3
+    text-2xl text-white
+    font-extrabold flex flex-col items-center gap-4 p-2 justify-center rounded-lg
+}
+
+.info{
+    border: 5px solid white;
+    @apply w-full p-2 rounded-lg font-extrabold flex flex-col items-center gap-4 py-2 justify-center
+}
+
+
+.tours{
+    @apply  flex flex-col items-center justify-center;
+    .tours-info{
+        @apply text-center gap-2 p-3 ;
+    }
+    .tours-info .title-tours{
+        @apply font-extrabold text-2xl text-primary ;
+    }
+}
+
+.destinos-div , .paquetes{
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    @apply  w-full grid place-content-center  gap-2 p-5
+}
+
+.content{
+    
+    height: auto;
+    width: 100%;
+    @apply relative  overflow-hidden rounded-lg h-auto;
+}
+
+

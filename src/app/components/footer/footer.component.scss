@@ -1,42 +1,48 @@
 section {
     display: grid;
-    @apply w-full bg-slate-950 px-4 py-6 grid-cols-4 gap-6; /* Definir grid con 4 columnas */
+   @apply w-full text-white bg-slate-950 px-4 py-6 grid-cols-2 gap-6; /* Definir grid con 4 columnas */
 }
 
-.details-luxury {
-    @apply col-span-4 flex gap-4 font-extrabold text-white items-center justify-between; /* El primer div ocupa todo el ancho */
+.icons{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
 }
+// .details-luxury {
+//     @apply col-span-4 flex gap-4 font-extrabold text-white items-center justify-between max-lg:flex-col; 
+// }
 
-.pay-methods {
-    // background: rgb(255, 181, 181);
-    @apply col-span-1 flex gap-2; 
-}
+// .pay-methods {
+//     // background: rgb(255, 181, 181);
+//     @apply col-span-1 flex gap-2 max-lg:flex-col; 
+// }
 
-.info {
-    // background: white;
-    @apply col-span-3 flex text-white gap-2 justify-end;
+// .info {
+//     // background: white;
+//     @apply col-span-3 flex text-white gap-2 justify-end  max-lg:flex-col;
 
-    .info-item{
-        // width: 250px;
-       @apply flex bg-slate-800 p-2 rounded-lg ; 
-    }
-}
+//     .info-item{
+//         // width: 250px;
+//        @apply flex bg-slate-800 p-2 rounded-lg ; 
+//     }
+// }
 
-.others {
-    // background: white;
-    @apply col-span-4 w-full flex justify-center gap-4; 
+// .others {
+//     // background: white;
+//     @apply col-span-4 w-full flex justify-center gap-4; 
 
-    app-button{
-        @apply bg-slate-900 rounded-lg;
-    }
-}
+//     app-button{
+//         @apply bg-slate-900 rounded-lg;
+//     }
+// }
 
 
-.details-luxury span {
-    @apply flex items-center bg-slate-800 p-2 rounded-lg;
-}
+// .details-luxury span {
+//     @apply flex items-center bg-slate-800 p-2 rounded-lg max-lg:flex-col;
+// }
 
-.pay-methods .item {
-    @apply bg-slate-800 rounded-lg p-2;
-}
+// .pay-methods .item {
+//     @apply bg-slate-800 rounded-lg p-2;
+// }
 

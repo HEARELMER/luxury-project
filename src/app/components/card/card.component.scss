@@ -1,13 +1,13 @@
 main{
     width: 300px;
-    @apply flex flex-col rounded-lg bg-slate-800  hover:-translate-y-2  transition duration-300 ease-in-out;
+    @apply flex flex-col rounded-lg bg-slate-800  cursor-pointer hover:scale-105   transition duration-300 ease-in-out;
 }
 
 .image-card img{
-    // width: 300px;
-    width: auto;
+
     height: 400px;
-    @apply   rounded-t-lg  ;
+    object-fit: cover; // esto es para que la iamgen no se disotrine por el anco del div
+    @apply   rounded-t-lg  w-auto ;
 }
 
 .info-card{

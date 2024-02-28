@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { ButtonsComponent } from '../buttons/buttons.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ButtonsComponent],
+  imports: [ButtonsComponent, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
 
+  
   // listaDeOpciones: any[] = [
   vuelos:string[]=['Internacionales', 'Nacionales']
   paquetes:string[]=[
@@ -37,4 +39,9 @@ export class HeaderComponent {
      'Valle de cascadas - Sarhua',
     ]
   contactos:string[] = ['Whatsapp', 'TikTok', 'Facebook']
+  
+  navigate(){
+    
+  }
+
 }
