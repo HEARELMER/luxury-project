@@ -1,14 +1,19 @@
 .btn{
-    @apply text-white  rounded-lg p-2 flex gap-1 justify-center items-center;
+    @apply text-white  rounded-lg p-2 flex gap-1 justify-center 
+    items-center hover:bg-slate-800;
     
-    &:hover{  
-        @apply bg-gray-800
-    }
+    // &:hover{  
+    //     @apply bg-gray-800;
+    // }
     img{
-        @apply w-5
+        @apply w-5;
     }
 }
 
+// .btn:active{
+//     @apply bg-gray-800;
+//     // background-color: aqua
+// }
 .drop-menu {
     
     @apply  absolute flex flex-col

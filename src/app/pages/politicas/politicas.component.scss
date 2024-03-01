@@ -2,6 +2,6 @@ main{
     @apply flex  flex-col justify-center items-center;
 }
 .text{
-     max-width: 400px;
-    @apply bg-slate-800  p-4 rounded-lg  ;
+    //  max-width: 400px;
+    @apply bg-slate-800  p-4 rounded-lg  w-1/2 ;
 }

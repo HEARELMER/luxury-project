@@ -4,38 +4,42 @@ section {
 }
 
 .icons{
-    margin-top: 20px;
+    margin-top: 20px  ;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
 }
-// .details-luxury {
-//     @apply col-span-4 flex gap-4 font-extrabold text-white items-center justify-between max-lg:flex-col; 
-// }
 
-// .pay-methods {
-//     // background: rgb(255, 181, 181);
-//     @apply col-span-1 flex gap-2 max-lg:flex-col; 
-// }
+.details-luxury{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
+}
+.item-details{
+    column-span: 1/2fr;
+    @apply flex w-60 justify-center items-center;
+    p{
+        // @apply 
+    }
+}
+.info-luxury{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    border-left: 2px solid rgb(51, 51, 51);
+    padding-left: 10px;
+}
 
-// .info {
-//     // background: white;
-//     @apply col-span-3 flex text-white gap-2 justify-end  max-lg:flex-col;
+.info-item{
+    @apply flex items-center gap-2;
+}
 
-//     .info-item{
-//         // width: 250px;
-//        @apply flex bg-slate-800 p-2 rounded-lg ; 
-//     }
-// }
+.others {
+    // background: white;
+    @apply col-span-4 w-full flex justify-center gap-4; 
 
-// .others {
-//     // background: white;
-//     @apply col-span-4 w-full flex justify-center gap-4; 
-
-//     app-button{
-//         @apply bg-slate-900 rounded-lg;
-//     }
-// }
+    app-button{
+        @apply bg-slate-900 rounded-lg;
+    }
+}
 
 
 // .details-luxury span {
@@ -43,6 +47,25 @@ section {
 // }
 
 // .pay-methods .item {
-//     @apply bg-slate-800 rounded-lg p-2;
-// }
-
+    //     @apply bg-slate-800 rounded-lg p-2;
+    // }
+    
+    
+    // .details-luxury {
+    //     @apply col-span-4 flex gap-4 font-extrabold text-white items-center justify-between max-lg:flex-col; 
+    // }
+    
+    // .pay-methods {
+    //     // background: rgb(255, 181, 181);
+    //     @apply col-span-1 flex gap-2 max-lg:flex-col; 
+    // }
+    
+    // .info {
+    //     // background: white;
+    //     @apply col-span-3 flex text-white gap-2 justify-end  max-lg:flex-col;
+    
+    //     .info-item{
+    //         // width: 250px;
+    //        @apply flex bg-slate-800 p-2 rounded-lg ; 
+    //     }
+    // }

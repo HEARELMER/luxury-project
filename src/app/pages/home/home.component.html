@@ -1,6 +1,6 @@
 
 <main>
-    <app-header></app-header>
+    <app-header id="inicio"></app-header>
     
     <section class="group-btn">
         <app-button btnClass="icon" [text]="''" >
@@ -15,14 +15,14 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="50" viewBox="0 0 28 28"><path fill="#ffffff" d="M5.754 4a3.75 3.75 0 0 0-3.75 3.75v11.5A3.75 3.75 0 0 0 5.754 23H22.25A3.75 3.75 0 0 0 26 19.25V7.75A3.75 3.75 0 0 0 22.25 4zm-2.25 3.75a2.25 2.25 0 0 1 2.25-2.25H22.25a2.25 2.25 0 0 1 2.25 2.25v.779L14 13.907L3.504 8.531zm0 2.467l10.154 5.2a.75.75 0 0 0 .684 0L24.5 10.215v9.036a2.25 2.25 0 0 1-2.25 2.25H5.755a2.25 2.25 0 0 1-2.25-2.25z"/></svg>
         </app-button>
     </section>
-   <div class="w-full">
-    <router-outlet>
-    
+   <div class="w-full ">
+    <router-outlet> 
     </router-outlet>
+    
    </div>
   
-    <button class="back ">
+    <button class="back"  >
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#eab308" d="m11 8.8l-2.9 2.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.6-4.6q.3-.3.7-.3t.7.3l4.6 4.6q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275L13 8.8V17q0 .425-.288.713T12 18q-.425 0-.712-.288T11 17z"/></svg>
     </button>
-    <app-footer class="w-full" ></app-footer>
+    <app-footer class="w-full relative" ></app-footer>
 </main>

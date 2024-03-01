@@ -25,10 +25,7 @@ h1{
 }
 .navbar{
     @apply  flex gap-4
-}
-
-
-   
+}   
     @media (min-width: 1286px){
         .menu{
             display: none;
