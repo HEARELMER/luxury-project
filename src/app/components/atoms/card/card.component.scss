@@ -1,0 +1,29 @@
+main{
+    width: 290px;
+    @apply flex flex-col rounded-lg bg-slate-800  cursor-pointer hover:scale-105   transition duration-300 ease-in-out;
+}
+
+.image-card img{
+
+    height: 350px;
+    object-fit: cover; // esto es para que la iamgen no se disotrine por el anco del div
+    @apply   rounded-t-lg  w-auto ;
+}
+
+.info-card{
+    @apply p-2  flex flex-col items-center;
+
+    .title,.price{
+        @apply font-extrabold text-xl text-yellow-300;
+    }
+    .details{
+        @apply text-gray-500 text-center flex flex-col;
+    }
+    
+    .btn-card{
+        @apply mt-1 bg-red-600 text-white font-semibold p-2 
+        rounded-lg
+        hover:bg-pink-950;
+    }
+    
+}

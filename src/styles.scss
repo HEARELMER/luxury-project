@@ -5,7 +5,9 @@
 body{
     scrollbar-width: 10px;
     scrollbar-color: green;
-    @apply bg-slate-900;
+    font-family: popins, sans-serif;
+    @apply bg-slate-900 text-white;
+    
 }
 
 

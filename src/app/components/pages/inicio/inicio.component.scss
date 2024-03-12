@@ -1,0 +1,80 @@
+main{
+   
+    @apply w-full flex flex-col items-center justify-center overflow-x-hidden;
+}
+.caroousel-div{
+    width: 100%;
+    height: 90vh;
+    // @apply mt-8 ;
+}
+//estilo para la iamgen
+.slider-images{
+    @apply w-full h-screen;
+
+    img{
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.slider-images::after {
+    content: "Cascadas Campanayuq";
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+   
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; 
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    @apply text-primary
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    // border-radius: 50%;
+}
+// .info{
+//     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+//     @apply z-10 bg-green-400 absolute bottom-0 right-0 w-1/3
+//     text-2xl text-yellow-200
+//     font-extrabold flex flex-col items-center gap-4 py-2 justify-center
+// }
+.place{
+    // clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    @apply z-10 bg-green-500 absolute bottom-5 right-3 w-1/3
+    text-2xl text-white
+    font-extrabold flex flex-col items-center gap-4 p-2 justify-center rounded-lg
+}
+
+.info{
+    border: 5px solid white;
+    @apply w-full p-2 rounded-lg font-extrabold flex flex-col items-center gap-4 py-2 justify-center
+}
+
+
+.tours{
+    @apply  flex flex-col items-center justify-center;
+    .tours-info{
+        @apply text-center gap-2 p-3 ;
+    }
+    .tours-info .title-tours{
+        @apply font-extrabold text-2xl text-primary ;
+    }
+}
+
+.destinos-div , .paquetes{
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    @apply  w-full grid place-content-center  gap-2 p-5
+}
+
+.content{
+    
+    height: auto;
+    width: 100%;
+    @apply relative  overflow-hidden rounded-lg h-auto;
+}
+

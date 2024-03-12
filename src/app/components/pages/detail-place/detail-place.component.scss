@@ -1,0 +1,72 @@
+main{
+    @apply w-full h-full flex flex-col  justify-center items-center m-3 gap-5;
+}
+
+.place{
+    display:  grid;
+    grid-template-columns: 1fr 1fr;
+    @apply gap-7 ;
+   
+}
+//imagenes
+.images{
+    @apply flex gap-7   justify-center;
+    .group-btn{
+        @apply flex h-full  flex-col justify-center gap-3;
+    }
+    img{
+        width: 390px;
+        height: 300px;
+        object-fit: cover;
+        @apply rounded-md ;
+    }
+}
+.info{
+    
+    @apply font-bold w-auto ;
+    .name{
+        @apply text-center;
+    }
+
+    .buttons{
+        @apply flex w-full gap-2 mt-4;
+    }
+}
+
+.group{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    @apply  gap-7;
+}
+.more-info{
+    display: flex;
+    flex-direction: column;
+    width: 590px;
+    gap: 20px;
+    .recomendation , .description{
+        @apply bg-slate-800 rounded-lg py-10 px-20;
+    }
+
+}
+
+.conditions{
+    width: 1180px;
+    @apply bg-slate-800  rounded-lg  py-10 px-20;
+}
+
+.note{
+    h1{
+        color: #3ADD00;
+    }
+
+}
+.btn-icon{
+    width: 80px;
+    height: 79px;
+    @apply   rounded-md bg-slate-800 
+    border border-solid border-slate-800 border-2;
+    img{
+        object-fit: cover;
+        @apply w-full h-full
+    }
+}

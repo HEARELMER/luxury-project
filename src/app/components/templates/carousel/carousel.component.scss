@@ -1,0 +1,20 @@
+// .content-card{
+//     @apply absolute block w-full  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
+// }
+
+main{
+    @apply w-full h-auto py-5 px-2;
+}
+.content{
+    @apply flex gap-3
+}
+
+.controls{
+    @apply flex w-full justify-center gap-6 mt-3;
+
+}
+
+    
+.visualize-index{
+    @apply flex gap-1 ;
+}

@@ -1,0 +1,39 @@
+
+header{
+    background-color: rgba(2, 6, 23, 0.6);
+    @apply w-full flex  p-3 justify-center ;
+}
+
+/* header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 65px;
+    
+    height: 1px; 
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(238, 26, 2) 60%, rgba(0,0,0,1) 100%);
+} */
+
+img {
+    @apply rounded-full w-10
+}
+h1{
+    font-size: 25px;
+    @apply text-red-600  font-extrabold
+}
+.navbar{
+    @apply  flex gap-4
+}   
+    @media (min-width: 1286px){
+        .menu{
+            display: none;
+        }
+    }
+    @media (max-width: 1286px){
+        .option{
+            display: none;
+        }
+    }
+ 

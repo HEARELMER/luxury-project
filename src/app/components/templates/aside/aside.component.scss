@@ -1,0 +1,10 @@
+main{
+    width: 290px;
+    @apply bg-slate-950 p-3 px-5 text-white  ;
+}
+svg{
+    @apply w-5;
+}
+span{
+    border-bottom: 1px dashed white;
+}
