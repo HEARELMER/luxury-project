@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
 import { initFlowbite } from 'flowbite';
 import { ButtonsComponent } from '../../atoms/buttons/buttons.component';
-import { AsideComponent } from '../../templates/aside/aside.component';
 import { CardComponent } from '../../atoms/card/card.component';
-import { CarouselComponent } from '../../templates/carousel/carousel.component';
-import { ContentCardsComponent } from '../../templates/content-cards/content-cards.component';
-import { FooterComponent } from '../../templates/footer/footer.component';
+import { AsideComponent } from '../../tmplate/aside/aside.component';
+import { CarouselComponent } from '../../tmplate/carousel/carousel.component';
+import { ContentCardsComponent } from '../../tmplate/content-cards/content-cards.component';
+import { FooterComponent } from '../../tmplate/footer/footer.component';
+
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
   imports:[ButtonsComponent, AsideComponent,
-    CardComponent,CarouselComponent, ContentCardsComponent, FooterComponent],
+    CardComponent,CarouselComponent, ContentCardsComponent, 
+    FooterComponent],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.scss'
 })
@@ -78,8 +80,13 @@ export class InicioComponent {
 ]
 
 imagesData:any[]=[
-    {
-        
+    {   
+        namePlace: 'Cascadas de Sarhua',
+        location: 'Ayacucho', 
+        image:'./assets/imagenes/campanayoq.jpg'
+
+    },
+    {   
         namePlace: 'Ayacucho',
         location: 'Ayacucho', 
         image:'./assets/imagenes/huamanga.webp'
@@ -137,8 +144,17 @@ paquetes:string[]=[
      'Valle de cascadas - Sarhua',
     ]
 
-ngOnInit(): void {
-  initFlowbite();
-}
+    currentImageIndex = 0;
+    currentImage = this.imagesData[this.currentImageIndex].image;
+  
+    ngOnInit() {
+      setInterval(() => {
+        this.currentImageIndex++;
+        if (this.currentImageIndex >= this.imagesData.length) {
+          this.currentImageIndex = 0;
+        }
+        this.currentImage = this.imagesData[this.currentImageIndex].image;
+      }, 5000);
+    }
 
 }

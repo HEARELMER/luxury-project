@@ -1,9 +1,4 @@
-<!-- <button class="btn">
-    {{ text }}
-</button>
-<button class="btn btn-icon">
-    {{ text }}
-</button> -->
+
 
 <button [class]="btnClass"  (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
     @if (btnClass.includes('btn-icon')  ) {
@@ -20,7 +15,11 @@
         <ng-container>
             <div class="drop-menu">
                @for (item of options; track $index) {
-                <a [routerLink]="['/places', item]" class="dropdown-item">{{item}}</a>
+                @if(item.includes('nacionales') || item==='nacionales'){
+                    <a [routerLink]="['/vuelos', item]  " class="dropdown-item">{{item}}</a>
+                }
+                
+                <a [routerLink]="['/places', item]  " class="dropdown-item">{{item}}</a>
                }
             </div>
         </ng-container>

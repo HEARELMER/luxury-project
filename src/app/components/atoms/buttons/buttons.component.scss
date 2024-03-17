@@ -2,19 +2,11 @@
     border-radius: 4.6px;
     @apply text-white  p-2 flex gap-1 justify-center 
     items-center hover:bg-slate-800;
-    
-    // &:hover{  
-    //     @apply bg-gray-800;
-    // }
     img{
         @apply w-5;
     }
 }
 
-// .btn:active{
-//     @apply bg-gray-800;
-//     // background-color: aqua
-// }
 .drop-menu {
     
     @apply  absolute flex flex-col
@@ -39,8 +31,21 @@
 }
 
 .icon{
-   
-    @apply px-2 rounded-full flex flex-col hover:scale-105;  ;  
+    @apply px-2 rounded-full flex flex-col hover:scale-105;     
+}
 
+@media (max-width: 1286px){
+
+    .btn{
+        @apply w-full  flex-wrap;
     
+    }
+    .drop-menu{
+        @apply relative w-full;
+    }
+    .drop-menu a{
+        @apply flex flex-col ;
+    }
+    .drop-menu::after{
+        content: none;}
 }

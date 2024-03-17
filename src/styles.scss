@@ -2,11 +2,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    // overflow-x: hidden;
+    margin: 0%;
+    padding: 0%;
+    // width: 100% ;
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-slate-200 ;
+}
+
+::-webkit-scrollbar-thumb {
+       @apply bg-dark-primary rounded-lg; 
+}
+}
 body{
-    scrollbar-width: 10px;
-    scrollbar-color: green;
+    // scrollbar-width: 10px;
+    // scrollbar-color: green;
     font-family: popins, sans-serif;
-    @apply bg-slate-900 text-white;
+   
+    @apply bg-slate-900 text-white w-full h-full;
     
 }
 

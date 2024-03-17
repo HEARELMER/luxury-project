@@ -1,6 +1,6 @@
 
 section{
-    @apply text-white flex flex-col justify-center items-center w-full ;
+    @apply text-white flex flex-col justify-center items-center w-full mt-16 ;
 }
 .somos{
      @apply flex p-6 gap-3 justify-center;
@@ -9,7 +9,7 @@ section{
         @apply w-1/4;
      }
      img{
-         @apply w-1/2 rounded-lg;
+         @apply w-1/2 rounded-lg object-cover;
         }
     }
 
@@ -23,4 +23,33 @@ li{
 .mision-vision{
     @apply flex p-6 gap-3 justify-center w-2/3;
 
+}
+
+@media(max-width:1050px){
+    
+    .text {
+        @apply w-3/4;
+    
+    }
+
+}
+@media(max-width:950px){
+    section{
+    }
+    .somos{
+        @apply justify-center items-center;
+        @apply flex-col-reverse ;
+        .text{
+           @apply w-auto;
+        }
+        img{
+            @apply w-full h-auto;
+        }
+    }
+    .valores{
+        @apply flex-col-reverse;
+    }
+    .mision-vision{
+        @apply flex-col w-full;
+    }
 }

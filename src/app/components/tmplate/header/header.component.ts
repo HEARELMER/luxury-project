@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 import { RouterLink } from '@angular/router';
 import { ButtonsComponent } from '../../atoms/buttons/buttons.component';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ButtonsComponent, RouterLink],
+  imports: [ButtonsComponent, RouterLink, NgClass],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -40,9 +41,43 @@ export class HeaderComponent {
      'Valle de cascadas - Sarhua',
     ]
   contactos:string[] = ['Whatsapp', 'TikTok', 'Facebook']
+
+
+  isMenuVisible:boolean = false;
+  toggleMenu(): void {
+    this.isMenuVisible = !this.isMenuVisible;
+  }
   
-  navigate(){
-    
+ isScroll:boolean = false;
+ @HostListener('window:scroll')
+  onScroll() {
+    const verticalOffset = window.pageYOffset 
+      || document.documentElement.scrollTop 
+      || document.body.scrollTop || 0;
+    this.isScroll = verticalOffset > 0;
   }
 
+  ngOnInit() {
+    this.onScroll();
+    this.togleMode()
+  }
+constructor(private renderer: Renderer2,
+   private el: ElementRef) {}
+isdarkMode:boolean = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+changeMode() {
+  if ( this.isdarkMode) {
+    this.renderer.removeClass(document.body, 'bg-white');
+    this.renderer.addClass(document.body, 'bg-slate-900');
+  } else {
+    this.renderer.removeClass(document.body, 'bg-slate-900');
+    this.renderer.addClass(document.body, 'bg-white');
+  }
+}
+
+togleMode(){
+  this.isdarkMode = !this.isdarkMode;
+  this.changeMode();
+}
+  
 }

@@ -4,15 +4,15 @@
     <div class="place">
         <div class="images">
            <div class="group-btn">
-            <button class="btn-icon">
-                <img src="./assets/imagenes/quinua-full.webp" alt="">
-           </button>
-           <button class="btn-icon">
-                <img src="./assets/imagenes/quinua-full.webp" alt="">
-           </button>
-           <button class="btn-icon">
-                <img src="./assets/imagenes/quinua-full.webp" alt="">
-           </button>
+                <button class="btn-icon">
+                        <img src="./assets/imagenes/quinua-full.webp" alt="">
+                </button>
+                <button class="btn-icon">
+                        <img src="./assets/imagenes/quinua-full.webp" alt="">
+                </button>
+                <button class="btn-icon">
+                        <img src="./assets/imagenes/quinua-full.webp" alt="">
+                </button>
            </div>
            <div class="img">
              <img src="./assets/imagenes/quinua-full.webp" alt="">
@@ -21,9 +21,9 @@
         </div>
         <div class="info">
             <div class="name">
-                <h1 class="text-primary font-bold text-3xl">{{data.name_place}}</h1>
+                <h1 class="text-dark-primary font-bold text-3xl">{{data.name_place}}</h1>
                 <h1 class="text-yellow-300  font-semibold text-2xl ">{{data.subname_place}}</h1>
-                <h1 class="text-primary font-bold text-4xl my-8">S/{{data.price}}</h1>
+                <h1 class="text-dark-primary font-bold text-4xl my-8">S/{{data.price}}</h1>
             </div>
             <div class="duration">
                 <h1 class="text-yellow-300">Duración :
@@ -36,13 +36,21 @@
             </div>
             <div class="buttons ">
 
-                <app-button btnClass="btn bg-slate-800 w-72 h-14 " [text]="'Ver en Maps'"></app-button>
-                <app-button btnClass="btn bg-yellow-300 hover:text-yellow-400 w-72 h-14" [text]="'Reservar'"></app-button>
-               
+                <button class="btn bg-slate-800">
+                    <a href="https://www.google.com/maps" target="_blank">Ver en Maps</a>
+                </button>
+                <button class="btn bg-dark-secondary">
+                    <span  >Reservar</span>
+                </button>
+                <!-- <app-button btnClass="btn bg-slate-800 w-72 h-14 " [text]="'Ver en Maps'"></app-button>
+                <app-button btnClass="btn bg-yellow-300 hover:text-yellow-400 px-16 w-72 h-14" [text]="'Reservar'"></app-button>
+                -->
             </div>
         </div>
     </div>
-   <div class="group">
+
+
+    <div class="group">
     <div class="more-info">
         <div class="description">
             <h1 class="text-yellow-300">Detalles</h1>
@@ -97,5 +105,5 @@
                <li>{{item}}</li>
             }
           </ul>
-    </div>
+    </div>  
 </main>

@@ -1,5 +1,5 @@
 main{
-    width: 290px;
+    width: 350px;
     @apply flex flex-col rounded-lg bg-slate-800  cursor-pointer hover:scale-105   transition duration-300 ease-in-out;
 }
 
@@ -26,4 +26,14 @@ main{
         hover:bg-pink-950;
     }
     
+}
+
+@media (max-width: 768px) {
+    // main{
+    //     width: 100%;
+    // }
+    .image-card img{
+        width: auto;
+        height: 280px;
+    }
 }

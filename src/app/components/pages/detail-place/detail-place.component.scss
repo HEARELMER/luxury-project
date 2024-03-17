@@ -1,11 +1,17 @@
-main{
-    @apply w-full h-full flex flex-col  justify-center items-center m-3 gap-5;
+.container{
+    // @apply w-full h-full flex flex-col
+
+    // justify-center items-center  gap-5;
+    
+    
+    @apply w-full flex m-auto flex-col gap-5 p-4;
+    margin-top: 100px;
 }
 
 .place{
     display:  grid;
     grid-template-columns: 1fr 1fr;
-    @apply gap-7 ;
+    @apply gap-4 ;
    
 }
 //imagenes
@@ -15,7 +21,7 @@ main{
         @apply flex h-full  flex-col justify-center gap-3;
     }
     img{
-        width: 390px;
+        width: auto;
         height: 300px;
         object-fit: cover;
         @apply rounded-md ;
@@ -23,13 +29,13 @@ main{
 }
 .info{
     
-    @apply font-bold w-auto ;
+    @apply font-bold w-auto flex flex-col items-center ; 
     .name{
         @apply text-center;
     }
 
     .buttons{
-        @apply flex w-full gap-2 mt-4;
+        @apply flex w-full gap-2 mt-4 justify-center;
     }
 }
 
@@ -41,7 +47,7 @@ main{
 .more-info{
     display: flex;
     flex-direction: column;
-    width: 590px;
+    // width: 590px;
     gap: 20px;
     .recomendation , .description{
         @apply bg-slate-800 rounded-lg py-10 px-20;
@@ -50,7 +56,7 @@ main{
 }
 
 .conditions{
-    width: 1180px;
+    // width: 1180px;
     @apply bg-slate-800  rounded-lg  py-10 px-20;
 }
 
@@ -70,3 +76,37 @@ main{
         @apply w-full h-full
     }
 }
+
+.btn{
+    @apply  rounded-md  text-white font-bold py-3 px-10;
+}
+
+@media (max-width: 1286px){
+    .images{
+        @apply flex-col gap-7   justify-center items-center;
+    }
+    .place{
+    @apply grid-cols-1 place-content-center;
+    }
+    .info{
+        @apply flex flex-col items-center;
+    }
+    .buttons{
+        @apply justify-center ;
+    }
+    .btn-icon{
+        display: none;
+    }
+
+    .group{
+        @apply grid-cols-1 place-content-center ;
+    }
+
+    .recomendation , .description{
+        @apply bg-none ;
+    }
+    .conditions{
+        @apply bg-none ;
+    }
+}
+

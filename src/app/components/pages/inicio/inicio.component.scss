@@ -1,5 +1,4 @@
 main{
-   
     @apply w-full flex flex-col items-center justify-center overflow-x-hidden;
 }
 .caroousel-div{
@@ -9,26 +8,37 @@ main{
 }
 //estilo para la iamgen
 .slider-images{
-    @apply w-full h-screen;
+    transition: opacity 1s ease-in-out;
+    @apply w-full h-full;
 
     img{
-        height: 100%;
-        object-fit: cover;
+        @apply h-screen object-cover;
     }
 }
 .slider-images::after {
-    content: "Cascadas Campanayuq";
-    font-size: 60px;
-    font-weight: bolder;
-    text-align: center;
-   
+    content: "";
+    
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 60%; 
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    @apply text-primary
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+   
+}
+.slider-images::before{
+    content: "Cascadas";
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+    width: 100%;
+    height: auto; 
+    text-shadow: 0px 5px 15px rgba(10, 10, 10, 0.9);
+    @apply text-white;
+
 }
 
 
@@ -37,18 +47,8 @@ img{
     height: 100%;
     // border-radius: 50%;
 }
-// .info{
-//     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
-//     @apply z-10 bg-green-400 absolute bottom-0 right-0 w-1/3
-//     text-2xl text-yellow-200
-//     font-extrabold flex flex-col items-center gap-4 py-2 justify-center
-// }
-.place{
-    // clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
-    @apply z-10 bg-green-500 absolute bottom-5 right-3 w-1/3
-    text-2xl text-white
-    font-extrabold flex flex-col items-center gap-4 p-2 justify-center rounded-lg
-}
+
+
 
 .info{
     border: 5px solid white;
@@ -62,7 +62,7 @@ img{
         @apply text-center gap-2 p-3 ;
     }
     .tours-info .title-tours{
-        @apply font-extrabold text-2xl text-primary ;
+        @apply font-extrabold text-2xl text-dark-primary ;
     }
 }
 
@@ -78,3 +78,21 @@ img{
     @apply relative  overflow-hidden rounded-lg h-auto;
 }
 
+.content{
+    @apply flex p-2  w-full justify-center gap-10 mt-8 justify-items-center;
+}
+
+@media (max-width: 1390px) {
+    .content{
+        @apply flex-col gap-4;
+    }
+    .destinos-div , .paquetes{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .caroousel-div{
+        height: 60vh;
+    }
+    .slider-images::before{
+        font-size: 40px;
+    }
+}

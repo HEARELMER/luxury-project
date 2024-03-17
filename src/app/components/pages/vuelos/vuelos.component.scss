@@ -1,0 +1,31 @@
+main{
+
+}
+
+.photo img{
+    @apply w-full h-80 object-cover;
+}
+
+.images-container{
+    @apply flex flex-col justify-center items-center mt-3 p-3 gap-2;
+    h1{
+        border-bottom: 3px solid red  ;
+        @apply text-2xl font-bold mb-3  text-center ;
+    }
+    .images{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        @apply grid gap-4;
+        img{
+            @apply w-auto h-96 rounded-lg object-cover;
+        }
+    }
+}
+.content{
+    @apply flex gap-4 ;
+}
+
+@media (max-width: 768px) {
+    .content{
+        @apply flex-col gap-4  justify-center items-center;
+    }
+}

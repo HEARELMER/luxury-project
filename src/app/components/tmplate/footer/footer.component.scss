@@ -1,0 +1,99 @@
+section {
+    display: grid;
+    text-wrap: wrap;
+   @apply w-full text-white px-4 py-6 bg-slate-950 grid-cols-2 gap-6 justify-center;
+}
+.icons{
+    margin-top: 20px  ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.details-luxury{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
+}
+.item-details{
+    column-span: 1/2fr;
+    @apply flex w-60 justify-center items-center;
+    p{
+        // @apply 
+    }
+}
+.info-luxury{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   
+    padding-left: 10px;
+}
+.others-i{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    place-content: center;
+    justify-content: center;
+    @apply gap-2;
+    img{
+        
+        @apply bg-slate-900 rounded-lg p-3 place-items-center h-24;
+    }
+
+}
+
+.info-item{
+    @apply flex items-center gap-2  font-semibold;
+    p{
+        max-width: 200px;
+        @apply  text-wrap;
+
+    }
+}
+
+.others {
+    // background: white;
+    @apply col-span-4 w-full flex justify-center gap-4; 
+
+    app-button{
+        @apply rounded-lg;
+    }
+}
+
+@media (max-width:750px){
+    section{
+        @apply flex flex-col justify-center items-center ;
+        
+        
+    }
+    .group{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+       gap: 20px;
+
+    }
+    .pay-methods{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        .icons{
+            @apply flex m-auto;
+        }
+        svg{
+            @apply w-28;
+        }
+    }
+    .details-luxury, .info-luxury, .icons {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .info-luxury{
+        grid-row: span 2;
+      
+    }
+    .pay-methods{
+        @apply flex flex-wrap justify-center gap-2;
+    }
+    .others-i{
+    @apply flex flex-wrap justify-center gap-2;
+    }
+}

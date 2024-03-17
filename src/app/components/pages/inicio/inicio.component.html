@@ -1,25 +1,28 @@
 <main>
     
     <div class="slider-images">
-        <img src="./assets/imagenes/campanayoq.jpg" alt="">
+        <!-- <img src="./assets/imagenes/campanayoq.jpg" alt=""> -->
+        <img [src]="currentImage" />
     </div>
 
-    <div class="flex  w-full justify-center p-4">
-        <div class="flex flex-col   w-full"> 
+    <div class="content">
+        <!-- <div class="flex flex-col   w-auto   justify-center items-center"> 
 
-            <app-content-cards class=" " [titleContainer]="'Tours más vendidos'">
+        </div> -->
+        <div class="flex flex-col">
+            <app-content-cards class="w-full " [titleContainer]="'Tours más vendidos'">
                 @for (item of dataCard; track $index) {
                     <app-card [dataCard]="item" ></app-card>
                 }
                 
             </app-content-cards>
-            <app-content-cards class="" [titleContainer]="'Paquetes Luxury en Ayacucho'" >
+            
+            <app-content-cards [titleContainer]="'Paquetes Luxury en Ayacucho'" >
                 @for (item of dataCard; track $index) {
                     <app-card [dataCard]="item" ></app-card>
                 }   
             </app-content-cards>
         </div>
-
         <aside class=" flex flex-col gap-3    items-center ">
             <app-aside [title]="'Tours darios'" [data]="tours" ></app-aside>
             <app-aside [title]="'Paquetes en Ayacucho'" [data]="paquetes" ></app-aside>
@@ -29,6 +32,9 @@
    
     
 </main>
+
+
+
     <!-- @defer  { -->
         <!-- <div id="default-carousel" (load)="'lazy'" class="relative caroousel-div" data-carousel="slide">
         
