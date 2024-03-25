@@ -1,0 +1,88 @@
+main {
+  width: 350px;
+  @apply flex flex-col rounded-lg bg-slate-800  cursor-pointer    transition duration-300 ease-in-out;
+}
+main:hover {
+  transform: scale(1.05);
+  &::before{
+   
+    content: '';
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 20%;
+    right: 50%;
+    text-align: center;
+    margin: auto;
+    background-color: rgba(250, 255, 255, 0.4);
+    z-index: 10;
+    @apply absolute   m-auto h-[200px] w-[200px]
+    animate-ping rounded-full ;
+    animation: transparentBackground 2s forwards;
+  } 
+}
+@keyframes transparentBackground {
+  0% {
+    background-color: rgba(250, 255, 255, 0.4);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+.animate-ping {
+  animation-iteration-count: 1;
+}
+
+
+main.isLight {
+  box-shadow: 0px 0px 10px 1px rgb(54, 53, 53, 0.6);
+  @apply bg-white text-black;
+}
+
+.image-card img {
+  height: 300px;
+  object-fit: cover; // esto es para que la iamgen no se disotrine por el anco del div
+  @apply rounded-t-lg  w-auto;
+  &:hover {
+    @apply opacity-[0.9];
+  }
+}
+
+.info-card {
+  @apply p-2  flex flex-col items-center;
+
+  .title,
+  .price {
+    @apply font-extrabold text-xl text-yellow-300;
+  }
+  .title.isLight {
+    // @apply text-orange-500;
+  }
+  .price.isLight {
+    @apply text-light-primary;
+  }
+
+  .details {
+    @apply text-gray-500 text-center flex flex-col;
+  }
+
+  .btn-card {
+    @apply mt-1 bg-red-600 text-white font-semibold p-2 
+        rounded-lg
+        hover:bg-pink-950;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-card img {
+    width: auto;
+    height: 280px;
+  }
+}
+
+// .icon-zoom{
+//   @apply absolute bottom-40 right-2 text-white;
+//   // &:hover{
+//   //   @apply text-yellow-300;
+//   // }
+// }

@@ -1,0 +1,66 @@
+.btn{
+    border-radius: 4.6px;
+    @apply text-white  py-2 px-4 flex gap-1 justify-center 
+    items-center hover:bg-slate-800;
+    img{
+        @apply w-5;
+    }
+}
+.btn.isLight{
+    @apply hover:bg-yellow-300;
+
+}
+
+.drop-menu {
+    
+    @apply  absolute flex flex-col
+    justify-start items-start
+     z-50 top-14 bg-slate-700 py-3 rounded-lg;
+}
+
+.drop-menu a {
+    @apply  text-white block px-4 py-2
+    w-full flex justify-start
+     hover:bg-slate-800;
+}
+.drop-menu.isLight{
+    @apply bg-white text-gray-400;
+    a{
+        @apply text-slate-600 hover:bg-red-600 hover:text-white;
+
+    }
+
+    &::after{
+        @apply border-b-white;
+    }
+}
+
+.drop-menu::after {
+    content: '';
+    position: absolute;
+    top: -18px; /* Posicionamos el pseudo-elemento debajo del menú desplegable */
+    left: 50%; /* Centramos el pseudo-elemento horizontalmente */
+    transform: translateX(-50%);
+    border: 10px solid transparent; /* Tamaño del triángulo */
+    @apply border-b-slate-700
+}
+
+.icon{
+    @apply px-2 rounded-full flex flex-col hover:scale-105;     
+}
+
+@media (max-width: 1286px){
+
+    .btn{
+        @apply w-full  flex-wrap;
+    
+    }
+    .drop-menu{
+        @apply relative w-full;
+    }
+    .drop-menu a{
+        @apply flex flex-col ;
+    }
+    .drop-menu::after{
+        content: none;}
+}

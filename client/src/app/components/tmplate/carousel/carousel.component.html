@@ -1,0 +1,27 @@
+<main class="text-center">
+    <h1  [ngClass]="{'isLight':!isdarkMode}"  class="text-2xl text-dark-secondary font-extrabold">
+        Tours más vendidos 2024
+    </h1>
+    <p class="text-xl font-bold">Disfruta de los atractivos de Ayacucho - Perú</p>
+    <swiper-container
+        class="mySwiper"
+        pagination="true"
+        pagination-clickable="true"
+        space-between="30"
+        slides-per-view="4"
+        autoplay="true"
+        data-swiper-autoplay="2000"
+        breakpoints='{"300": {"slidesPerView": 1, "spaceBetween": 10},
+            "400": {"slidesPerView": 1,"spaceBetween": 10},
+            "600": {"slidesPerView": 1,"spaceBetween": 10},
+            "768": {"slidesPerView": 2,"spaceBetween": 20},
+            "900": {"slidesPerView": 3,"spaceBetween": 30},
+            "1200": {"slidesPerView": 4,  "spaceBetween": 30}}'
+    >
+        @for (item of dataCard; track $index) {
+        <swiper-slide loading="lazy">
+            <app-card [dataCard]="item"></app-card>
+        </swiper-slide>
+        }
+    </swiper-container>
+</main>

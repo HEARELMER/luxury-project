@@ -1,0 +1,89 @@
+section {
+
+    text-wrap: wrap;
+   @apply w-full h-full text-white  bg-slate-950
+    gap-6 justify-center bottom-0 flex flex-col;
+    // &::after {
+    //   content: "";
+    //   @apply absolute right-[10%]
+    //        w-[300px] h-[300px]
+    //         rounded-full
+    //          bg-blue-500
+    //          blur-[100px] 
+    //          opacity-50 mt-6;
+    // }
+}
+
+
+
+section.isLight{
+    @apply bg-slate-100 text-gray-700;
+    box-shadow: rgb(32, 32, 32,0.3) 0px 0px 10px 0px;
+    img{
+        @apply bg-transparent;
+    }
+}
+
+.others-i{
+    place-content: center;
+    justify-content: center;
+
+    @apply gap-4 flex flex-col w-full bg-dark-secondary px-2 py-2;
+    img{
+        
+        @apply  place-items-center h-16;
+    }
+    
+    .icons , .pay-methods{
+        @apply flex justify-center gap-4 flex-wrap;
+    
+    }
+}
+
+// .icons{
+//     margin-top: 20px  ;
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//     gap: 10px;
+// }
+
+.details-luxury, .info-luxury{
+   
+    @apply flex flex-wrap justify-center gap-4 mt-2;
+}
+.item-details{
+
+    @apply flex w-80 justify-center items-center;
+   
+}
+// .info-luxury{
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   
+//     padding-left: 10px;
+// }
+
+
+.info-item{
+    @apply flex items-center gap-2  font-semibold;
+    p{
+        max-width: 200px;
+        @apply  text-wrap;
+
+    }
+}
+
+.others {
+    // background: white;
+    @apply col-span-4 w-full flex justify-center gap-4 mb-4; 
+
+    app-button{
+        @apply rounded-lg;
+    }
+}
+.content-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}

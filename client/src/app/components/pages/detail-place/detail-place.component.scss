@@ -1,0 +1,75 @@
+
+// nueva design
+
+.container{
+
+    @apply w-full flex m-auto flex-col gap-5  justify-center items-center mb-10;
+    margin-top: 100px;
+}
+
+.place{
+    display:  grid;
+    grid-template-columns: 1fr 1fr;
+    @apply gap-10 ;
+   
+}
+swiper-container {
+    width: 100px;
+    height: 100px;
+    @apply rounded-md h-80 object-cover w-[500px];
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @apply rounded-lg;
+  }
+
+.btn{
+    @apply  rounded-md  text-white font-bold py-3 px-10 w-full;
+}
+
+.info{
+    
+    @apply h-80 w-[500px] flex flex-col justify-between font-bold items-center ; 
+    .name{
+        @apply text-center;
+    }
+
+    .buttons{
+        @apply flex w-full gap-3 mt-4 justify-center;
+
+        button:hover{
+            @apply transform scale-105 ease-in-out;
+            transition: transform 0.3s ease-in-out;
+        
+        }
+    }
+}
+// SECTION DETAILS
+.details{
+    @apply w-full flex flex-col gap-5  justify-center items-center;
+}
+.card{
+    @apply w-[500px] bg-slate-800 rounded-lg py-7 px-5 gap-6;
+}
+.group-items{
+    @apply grid grid-cols-2 gap-10;
+}
+.note{
+    h1{
+        color: #3ADD00;
+    }
+
+}

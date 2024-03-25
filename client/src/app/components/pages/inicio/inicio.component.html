@@ -1,0 +1,45 @@
+<main>
+  <div class="slider-images">
+    <!-- <img src="./assets/imagenes/campanayoq.jpg" alt=""> -->
+    <img [src]="currentImage" alt={{title}} [height]="100" />
+    <div class="title">
+      <h1 class="animate-pulse">{{ title }}</h1>
+      <button
+        [routerLink]="'/contactos'"
+        class="bg-red-600 rounded-full px-5 py-2 hover:bg-red-500 transform hover:scale-110 transition-transform ease-in-out"
+      >
+        Reserva aquí
+      </button>
+      <p>Conoce los mejores lugares turísticos de Ayacucho</p>
+      <!-- <app-button [text]="'Contáctanos y reserva tu viaje'" ></app-button> -->
+    </div>
+  </div>
+
+
+<div class="carousel-container" [ngClass]="{'isLight':!isdarkMode}" >
+
+    <app-carousel></app-carousel>
+ 
+</div>
+
+  <div class="content">
+    <div class="flex flex-col">
+      <app-content-cards class="w-full" [titleContainer]="'Tours más vendidos'">
+        @for (item of dataCard; track $index) {
+        <app-card [dataCard]="item"></app-card>
+        }
+      </app-content-cards>
+
+      <app-content-cards [titleContainer]="'Paquetes Luxury en Ayacucho'">
+        @for (item of dataCard; track $index) {
+        <app-card [dataCard]="item"></app-card>
+        }
+      </app-content-cards>
+    </div>
+    <aside class="flex flex-col gap-3 items-center">
+      <app-aside [title]="'Tours darios'" [data]="tours"></app-aside>
+      <app-aside [title]="'Paquetes en Ayacucho'" [data]="paquetes"></app-aside>
+    </aside>
+  </div>
+</main>
+

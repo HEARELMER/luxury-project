@@ -1,0 +1,19 @@
+<main [ngClass]="{'isLight':!isdarkMode}">
+  <div class="image-card">
+    <img src="{{ dataCard.image }}" loading="lazy" alt={{dataCard.namePlace}} [routerLink]="['places/', dataCard.namePlace]" />
+  </div>
+  <div class="info-card">
+    
+    <h1 class="title" [ngClass]="{'isLight':!isdarkMode}" >
+      {{ dataCard.namePlace }}
+    </h1>
+    <p class="details">
+      Duración: {{ dataCard.duration }} <br />
+      Inicio : {{ dataCard.hour }}
+    </p>
+    <span class="price" [ngClass]="{'isLight':!isdarkMode}"> S/ {{ dataCard.price }} </span>
+    <button class="btn-card" [routerLink]="['places/', dataCard.namePlace]">
+      + Mas detalles
+    </button>
+  </div>
+</main>

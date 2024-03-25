@@ -1,0 +1,213 @@
+<main [ngClass]="{ isLight: !isdarkMode }" class="container">
+  <div class="place">
+    <swiper-container class="mySwiper" pagination="true" pagination-dynamic-bullets="true">
+      <swiper-slide>
+        <img src="./assets/imagenes/quinua-full.webp" alt="" />
+      </swiper-slide> 
+      <swiper-slide>
+        <img src="./assets/imagenes/quinua-full.webp" alt="" />
+      </swiper-slide> 
+      <swiper-slide>
+        <img src="./assets/imagenes/quinua-full.webp" alt="" />
+      </swiper-slide> 
+  
+    </swiper-container>
+
+    <div class="info">
+      <div class="name">
+        <h1 class="text-dark-primary font-bold text-3xl">
+          {{ data.name_place }}
+        </h1>
+        <h1 class="text-yellow-300 font-semibold text-2xl">
+          {{ data.subname_place }}
+        </h1>
+        <h1 class="text-dark-primary font-bold text-4xl my-8">
+          S./{{ data.price }}
+        </h1>
+      </div>
+      <div class="duration">
+        <h1 class="text-yellow-300">
+          Duración :
+          <span class="text-white">{{ data.duration[0].type_duration }}</span>
+        </h1>
+        <h1 class="text-yellow-300">
+          Inicio :
+          <span class="text-white">{{ data.duration[0].hour }}</span>
+        </h1>
+      </div>
+      <div class="buttons">
+        <button class="btn bg-slate-800">
+          <a href="https://www.google.com/maps" target="_blank">Ver en Maps</a>
+        </button>
+        <button class="btn bg-dark-secondary">
+          <span>Reservar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="group-items">
+    <div class="details">
+      <div class="card">
+        <h1 class="text-yellow-300">Detalles</h1>
+        <p>
+          {{ data.description }}
+        </p>
+      </div>
+      <div class="card">
+        <h1 class="text-yellow-300">Recomendaciones</h1>
+        <ul>
+          @for (item of data.recomendation; track $index) {
+          <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+      <div class="card">
+        <h1 class="text-yellow-300">Condiciones para reservaciones</h1>
+        <ul>
+          @for (item of data.condition; track $index) {
+          <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+  
+    </div>
+  
+    <div class="details">
+      <div class="card">
+        <h1 class="text-yellow-300 font-semibold">Incluye</h1>
+        <ul class="ml-3">
+          @for (item of data.include; track $index) {
+          <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+      <div class="card">
+        <h1 class="text-yellow-300 font-semibold">No Incluye</h1>
+        <ul class="ml-3">
+          @for (item of data.include; track $index) {
+          <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+      <div class="card note">
+        <h1 class="font-bold">Nota</h1>
+          <ul class="ml-3">
+            @for (item of data.note; track $index) {
+            <li>{{ item }}</li>
+            }
+          </ul>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- <main [ngClass]="{ isLight: !isdarkMode }" class="container">
+  <div class="place">
+    <div class="images">
+      <div class="group-btn">
+        <button class="btn-icon">
+          <img src="./assets/imagenes/quinua-full.webp" alt="" />
+        </button>
+        <button class="btn-icon">
+          <img src="./assets/imagenes/quinua-full.webp" alt="" />
+        </button>
+        <button class="btn-icon">
+          <img src="./assets/imagenes/quinua-full.webp" alt="" />
+        </button>
+      </div>
+      <div class="img">
+        <img src="./assets/imagenes/quinua-full.webp" alt="" />
+      </div>
+    </div>
+    <div class="info">
+      <div class="name">
+        <h1 class="text-dark-primary font-bold text-3xl">
+          {{ data.name_place }}
+        </h1>
+        <h1 class="text-yellow-300 font-semibold text-2xl">
+          {{ data.subname_place }}
+        </h1>
+        <h1 class="text-dark-primary font-bold text-4xl my-8">
+          S/{{ data.price }}
+        </h1>
+      </div>
+      <div class="duration">
+        <h1 class="text-yellow-300">
+          Duración :
+          <span class="text-white">{{ data.duration[0].type_duration }}</span>
+        </h1>
+        <h1 class="text-yellow-300">
+          Inicio :
+          <span class="text-white">{{ data.duration[0].hour }}</span>
+        </h1>
+      </div>
+      <div class="buttons">
+        <button class="btn bg-slate-800">
+          <a href="https://www.google.com/maps" target="_blank">Ver en Maps</a>
+        </button>
+        <button class="btn bg-dark-secondary">
+          <span>Reservar</span>
+        </button>
+       
+                <app-button btnClass="btn bg-yellow-300 hover:text-yellow-400 px-16 w-72 h-14" [text]="'Reservar'"></app-button>
+              
+      </div>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="more-info">
+      <div class="description">
+        <h1 class="text-yellow-300">Detalles</h1>
+        <p>
+          {{ data.description }}
+        </p>
+      </div>
+      <div class="recomendation">
+        <h1 class="text-yellow-300">Recomendaciones</h1>
+        <ul>
+          @for (item of data.recomendation; track $index) {
+          <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="more-info">
+      <div class="include">
+        <h1 class="text-yellow-300 font-semibold">Incluye</h1>
+        <ul class="ml-3">
+          @for (item of data.include; track $index) {
+          <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+      <div class="include">
+        <h1 class="text-yellow-300 font-semibold">No Incluye</h1>
+        <ul class="ml-3">
+          @for (item of data.no_include; track $index) {
+          <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+      <div class="note font-semibold">
+        <h1>Nota</h1>
+        <ul class="ml-3">
+          @for (item of data.note; track $index) {
+          <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="conditions">
+    <h1 class="text-yellow-300" [ngClass]="{ islight: isdarkMode }">
+      Condiciones para reservercaciones
+    </h1>
+    <ul>
+      @for (item of data.condition; track $index) {
+      <li>{{ item }}</li>
+      }
+    </ul>
+  </div>
+</main> -->

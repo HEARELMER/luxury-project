@@ -1,0 +1,26 @@
+section{
+    @apply  w-full flex flex-col  items-center justify-center;
+}
+.container{
+
+    @apply grid gap-4 ;
+    grid-template-columns: repeat(3, minmax(300px, 1fr)) ;
+}
+
+.title{
+    @apply w-full flex flex-col items-center justify-center mb-7;
+    h1{
+        @apply text-2xl text-dark-primary font-extrabold;
+    }
+}
+
+@media(max-width: 1050px){
+    section{
+        @apply    items-center justify-center;
+    }
+    .container{
+        // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) ;
+        // justify-content: center ;
+        @apply flex flex-wrap justify-center gap-4;
+    }
+}

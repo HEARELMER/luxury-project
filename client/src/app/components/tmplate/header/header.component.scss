@@ -1,0 +1,65 @@
+
+header{
+    background-color: rgba(2, 6, 23, 0.6);
+    @apply w-auto flex  p-3 justify-around ;
+}
+header.isLight{
+    @apply bg-red-400;
+    // background-color: rgba(255, 255, 255, 0.1);
+    .btn-menu{
+        @apply  bg-yellow-300;
+        svg path{
+            @apply fill-red-600;
+        }
+    }
+}
+header.scrolled {
+    @apply bg-dark-primary;
+  }
+.logo{
+    @apply flex gap-2 items-center;
+    img {
+        @apply rounded-full w-10
+    }
+    h1{
+        font-size: 25px;
+        @apply text-dark-secondary font-extrabold  ;
+    }
+}
+.navbar{
+    @apply  flex gap-4;
+
+}
+
+
+
+.btn-menu{
+    display: none;
+    @apply bg-slate-900 rounded-full;
+}
+    /* @media (min-width: 1286px){
+    } */
+    @media (max-width: 1286px){
+
+        header{
+            @apply justify-between flex;
+           
+        }
+        .navbar{
+            display: none;
+        }
+        .navbar.active{
+            display: flex;
+            
+            
+            @apply w-full h-screen absolute flex-col gap-4 bg-slate-800  p-4 top-16 right-0 z-50;
+        }
+        
+        .btn-menu{
+            display: block;
+            
+        }
+
+       
+    }
+ 

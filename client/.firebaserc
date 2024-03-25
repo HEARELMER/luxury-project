@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "luxury-travelpe": {
+      "hosting": {
+        "luxury": [
+          "luxury-travelpe"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "luxury-travelpe"
+  }
+}

@@ -1,0 +1,30 @@
+<button
+  [class]="btnClass"
+  [ngClass]="{ isLight: !isdarkMode }"
+  (mouseenter)="isHovered = true"
+  (mouseleave)="isHovered = false"
+>
+  @if (btnClass.includes('btn-icon') ) {
+  <ng-container>
+    <img [src]="icon" />
+  </ng-container>
+  }
+  {{ text }}
+  @if (btnClass.includes('icon') ) {
+  <ng-content></ng-content>
+  } @if (btnClass.includes('btn-drop') && isHovered || isMenuHovered ) {
+  <ng-container>
+    <div class="drop-menu" 
+      [ngClass]="{ isLight: !isdarkMode }"
+    >
+      @for (item of options; track $index) { @if(item.includes('nacionales') ||
+      item==='nacionales'){
+      <a [routerLink]="['/vuelos', item]" class="dropdown-item">{{ item }}</a>
+      }
+
+      <a [routerLink]="['/places', item]" class="dropdown-item">{{ item }}</a>
+      }
+    </div>
+  </ng-container>
+  }
+</button>

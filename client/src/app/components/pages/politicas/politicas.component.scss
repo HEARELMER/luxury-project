@@ -1,0 +1,39 @@
+main {
+    margin-top: 100px;
+    @apply flex flex-col justify-center items-center p-4 gap-5;
+  }
+  
+  .text {
+    background-color: #2d3748; /* Cambia a tu color de fondo preferido */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px; /* Limita el ancho máximo del texto */
+  }
+  
+  .minicard {
+    margin-top: 20px; /* Espaciado entre las tarjetas */
+    border: 1px solid #4a5568; /* Borde alrededor de las tarjetas */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .text h1, .minicard h2 {
+    color: #f6e05e; /* Color de texto principal */
+  }
+  
+  .text p, .minicard p {
+    color: #a0aec0; /* Color de texto secundario */
+    margin-bottom: 10px; /* Espaciado entre párrafos */
+  }
+  
+  span {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .check {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  

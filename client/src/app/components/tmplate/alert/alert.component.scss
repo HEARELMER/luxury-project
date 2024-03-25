@@ -1,0 +1,23 @@
+main{
+    background-color: rgb(11, 11, 11,0.8);
+    @apply h-screen w-full flex flex-col justify-center top-0 left-0
+     items-center z-50 fixed ;
+}
+
+.content{
+    @apply bg-slate-900  p-4 rounded-lg flex flex-col
+     justify-center items-center h-80 w-80;
+}
+
+.buttons{
+    @apply flex flex-col gap-3 w-full mt-3 ;
+    button{
+        @apply bg-slate-800 text-white p-2 rounded-md
+         hover:bg-slate-700 transition-all duration-300;
+    }
+
+}
+
+.btn-close{
+    @apply  left-0  w-full flex justify-end;
+}
